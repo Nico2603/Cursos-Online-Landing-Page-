@@ -1,0 +1,16 @@
+/* App.css */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5; /* Fondo gris */
+}
+
+.component-container {
+  text-align: center;
+  padding: 20px 20px;
+  background-color: #fff; /* Fondo blanco */
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
