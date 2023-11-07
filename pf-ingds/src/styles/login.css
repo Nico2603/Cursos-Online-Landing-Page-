@@ -6,6 +6,7 @@
 
 h2 {
   font-size: 24px;
+  color: #007bff;
 }
 
 input {
@@ -22,4 +23,21 @@ button {
 }
 button:hover {
   background-color: #0056b3;
+}
+.login-form {
+  background-color: #fff; /* Fondo blanco */
+  border: 1px solid #000; /* Borde con color de borde gris */
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 20px; /* Espaciado interior */
+  max-width: 300px; /* Ancho máximo del formulario */
+  margin: 0 auto; /* Centra horizontalmente el formulario */
+  text-align:center; /* Alineación de texto en el centro */
+}
+
+.login-form h2 {
+  font-size: 24px; /* Tamaño de fuente */
+  color: #007bff; /* Color de texto, ajusta según tus necesidades */
+  margin-bottom: 10px; /* Espaciado inferior */
+  border-bottom: 2px solid #333; /* Línea divisoria con el mismo color que el texto */
+  padding-bottom: 5px; /* Espaciado inferior para la línea divisoria */
 }
