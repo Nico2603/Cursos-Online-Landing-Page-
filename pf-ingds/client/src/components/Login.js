@@ -1,16 +1,30 @@
 import React from "react";
 import {useState} from "react";
+import Axios from "axios";
 import "../styles/login.css";
+
+
 const Login = () => {
   const [formData, setFormData] = useState({
     username: "",
     password: "",
   });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
-    // Aquí puedes agregar la lógica para enviar los datos del formulario
-    console.log("Datos del formulario:", formData);
+    Axios.post("http://localhost:3001/login",{
+      username: formData.username,
+      password: formData.password
+    }).then((response)=>{
+      if(response.data.success){
+        alert("Inicio de sesión existoso");
+        window.location.href = '/Dashboard'; 
+      }else{
+        alert("Datos erroneos");
+      }
+    }).catch((error)=>{
+      console.log("Error en inicio de sesion",error);
+    });
   };
 
   const handleChange = (e) => {
@@ -27,7 +41,7 @@ const Login = () => {
         <h1>Usuario</h1>
         <input
           type="text"
-          name="user"
+          name="username"
           placeholder="Ingrese su usuario"
           value={formData.username}
           onChange={handleChange}
@@ -37,7 +51,7 @@ const Login = () => {
         <h1>Contraseña</h1>
         <input
           type="password"
-          name="pass"
+          name="password"
           placeholder="Ingrese su Contraseña"
           value={formData.password}
           onChange={handleChange}

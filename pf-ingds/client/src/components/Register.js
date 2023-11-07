@@ -9,13 +9,16 @@ const Register = () => {
     password: "",
     user_type: "",
   });
+  
   const handleSubmit = async (e) => {
+    e.preventDefault();
     Axios.post("http://localhost:3001/create",{
       username: formData.username,
       password: formData.password,
       user_type: formData.user_type
     }).then(()=>{
-      alert("Empleado registrado");
+      alert("Usuario registrado");
+      window.location.href="/";
     });
   };
 
@@ -56,6 +59,7 @@ const Register = () => {
           onChange={handleChange}
           required
         >
+          <option value="">Elija una opción</option>
           <option value="instructor">Instructor</option>
           <option value="estudiante">Estudiante</option>
         </select>
