@@ -1,0 +1,39 @@
+.navbar {
+    background-color: #007bff;
+    overflow: hidden;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+
+}
+
+.nav-menu {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    padding: 1rem;
+}
+
+.nav-item a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #444;
+    margin-right: 5px;
+}
+
+.nav-item a:hover {
+    color: #ddd;
+    background-color: #555;
+}
