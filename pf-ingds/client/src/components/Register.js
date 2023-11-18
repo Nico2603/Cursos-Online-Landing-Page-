@@ -30,43 +30,46 @@ const Register = () => {
     });
   };
   return (
-    <div className="cont">
-      <h2 className="register-form">Register</h2>
+    <div className="register-container">
       <form onSubmit={handleSubmit}>
-        <h1>Usuario</h1>
-        <input
-          type="text"
-          name="username"
-          placeholder="Cree su usuario"
-          value={formData.username}
-          onChange={handleChange}
-          required="required"
-        />
-        <br />
-        <h1>Contraseña</h1>
-        <input
-          type="password"
-          name="password"
-          placeholder="Cree su Contraseña"
-          value={formData.password}
-          onChange={handleChange}
-          required="required"
-        />
-        <h1>tipo de usuario</h1>
-        <select
-          name="user_type"
-          value={formData.user_type}
-          onChange={handleChange}
-          required
-        >
-          <option value="">Elija una opción</option>
-          <option value="instructor">Instructor</option>
-          <option value="estudiante">Estudiante</option>
-        </select>
-        <br />
-        <br />
-        <button type="submit">Registrarse</button>
+        <h1>Sign up</h1>
+        <div className="form-group">
+          <label htmlFor="username">Username</label>
+          <input 
+            type="text" 
+            className="form-control" 
+            name="username" 
+            placeholder="Enter username" 
+            value={formData.username}
+            onChange={handleChange}
+            required="required"
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="password">Password</label>
+          <input 
+            type="password" 
+            className="form-control" 
+            name="password" 
+            placeholder="Enter password" 
+            value={formData.password}
+            onChange={handleChange}
+            required="required"
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="user_type">User type</label>
+          <select className="form-control" name="user_type">
+            <option value="">Select user type</option>
+            <option value="estudiante">Estudiante</option>
+            <option value="instructor">Instructor</option>
+          </select>
+        </div>
+        <button type="submit" className="btn btn-primary">Sign up</button>
       </form>
+      <div className="login-link">
+        <a href="/Login">Already have an account? Log in</a>
+      </div>
     </div>
   );
 };

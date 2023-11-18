@@ -3,7 +3,7 @@ import {Outlet} from "react-router-dom";
 import "./styles/App.css";
 
 const App = () => {
-  return (
+  return(
     <div className="container">
       <div className="component-container">
         <Outlet />

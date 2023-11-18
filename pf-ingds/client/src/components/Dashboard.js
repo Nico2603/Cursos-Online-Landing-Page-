@@ -1,10 +1,14 @@
 import React from "react";
+import SideBar from "./SideBar";
+import "../styles/Dashboard.css";
 
-function Dashboard() {
+const Dashboard =()=> {
   return (
-    <div>
-      <h1>Dashboard</h1>
-      <p>Bienvenido al panel de control.</p>
+    <div className="dashboard-container">
+      <SideBar />
+      <div className="dashboard-content">
+        <h1>Welcome to the Dashboard</h1>
+      </div>
     </div>
   );
 }

@@ -1,43 +1,48 @@
-/* Login.css */
-.cont {
-  text-align: center;
-  margin: 10%;
+.login-container {
+ width: 300px;
+ padding: 16px;
+ margin: 0 auto;
+ background-color: #f7f7f7;
+ border: 1px solid #ccc;
+ border-radius: 4px;
 }
 
-h2 {
-  font-size: 24px;
-  color: #007bff;
+.form-group {
+ margin-bottom: 15px;
 }
 
-input {
-  width: 90%;
+.form-control {
+ width: 100%;
+ padding: 6px 12px;
+ margin: 0;
+ border: 1px solid #ccc;
+ border-radius: 4px;
+ box-sizing: border-box;
 }
 
-button {
-  background-color: #007bff;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  transition:background-color 0.3s ease;
-}
-button:hover {
-  background-color: #0056b3;
-}
-.login-form {
-  background-color: #fff; /* Fondo blanco */
-  border: 1px solid #000; /* Borde con color de borde gris */
-  border-radius: 5px; /* Bordes redondeados */
-  padding: 20px; /* Espaciado interior */
-  max-width: 300px; /* Ancho máximo del formulario */
-  margin: 0 auto; /* Centra horizontalmente el formulario */
-  text-align:center; /* Alineación de texto en el centro */
+.btn {
+ display: inline-block;
+ font-weight: 400;
+ text-align: center;
+ white-space: nowrap;
+ vertical-align: middle;
+ user-select: none;
+ border: 1px solid transparent;
+ padding: 6px 12px;
+ font-size: 14px;
+ line-height: 1.42857143;
+ border-radius: 4px;
+ color: #fff;
+ background-color: #007bff;
 }
 
-.login-form h2 {
-  font-size: 24px; /* Tamaño de fuente */
-  color: #007bff; /* Color de texto, ajusta según tus necesidades */
-  margin-bottom: 10px; /* Espaciado inferior */
-  border-bottom: 2px solid #333; /* Línea divisoria con el mismo color que el texto */
-  padding-bottom: 5px; /* Espaciado inferior para la línea divisoria */
+.btn-primary {
+ background-color: #007bff;
+ border-color: #000;
+}
+
+.btn:hover {
+ color: #fff;
+ background-color: #0056b3;
+ border-color: #000;
 }
