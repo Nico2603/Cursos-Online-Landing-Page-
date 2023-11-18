@@ -3,6 +3,10 @@ import '../styles/NavBar.css';
 import logo from "../images/logo.svg"
 
 const NavBar = () => {
+    const cerrarSesion=()=>{
+        window.history.pushState({}, document.title, "/");
+        window.history.replaceState({}, document.title, window.location.pathname)
+    };
     return (
         <nav className="navbar">
             <div className="nav-container">
@@ -19,7 +23,10 @@ const NavBar = () => {
                         <a href="#">Acerca de</a>
                     </li>
                     <li className="nav-item">
-                        <a href="#">Contacto</a>
+                        <a href="https://www.instagram.com/camilocy/" target="_blank">Contacto</a>
+                    </li>
+                    <li className="nav-item">
+                        <a href="/login" onClick={cerrarSesion}>Cerrar Sesión</a>
                     </li>
                 </ul>
             </div>
